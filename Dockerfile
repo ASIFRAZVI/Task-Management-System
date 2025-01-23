@@ -11,6 +11,6 @@ RUN pip install gunicorn
 
 # RUN python manage.py migrate
 
-EXPOSE 8000
+EXPOSE 8015
 
-CMD [ "python3", "-m", "gunicorn", "task_management_system.wsgi:application", "-w", "4", "--bind", "0.0.0.0:8000" ]
+CMD [ "python3", "-m", "gunicorn", "task_management_system.wsgi:application", "-w", "4", "--bind", "0.0.0.0:8015" ]
