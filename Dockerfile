@@ -9,7 +9,7 @@ ADD . /app/
 RUN pip install -r requirement.txt
 RUN pip install gunicorn
 
-RUN python manage.py migrate
+# RUN python manage.py migrate
 
 EXPOSE 8000
 
