@@ -16,7 +16,7 @@ urlpatterns = [
     path("verify/", VerifyUser.as_view(), name="ativate_account"),
     # resend otp
     path("resend-otp/", resend_otp, name="resend_otp"),
-    # simple jwt urls
-    path("api/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
-    path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
+    # # simple jwt urls
+    # path("token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
+    path("token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
 ]

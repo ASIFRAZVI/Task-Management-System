@@ -1,0 +1,33 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: task-management-web
+    env_file:
+      - .env
+    ports:
+      - "8015:8015"
+    command: >
+      sh -c "
+      python manage.py migrate &&
+      gunicorn task_management_system.wsgi:application -w 4 --bind 0.0.0.0:8015
+      "
+    depends_on:
+      - postgres
+
+# postgres db and image files
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}  
+      POSTGRES_USER: ${POSTGRES_USER}  
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD} 
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
