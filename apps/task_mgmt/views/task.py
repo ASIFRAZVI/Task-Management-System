@@ -43,7 +43,7 @@ class TaskView(APIView):
         # check the user exists
         user_obj = UserMaster.objects.filter(id=validated_user_id).first()
         if user_obj is None:
-            return Response({"error": "Student not found"}, status=400)
+            return Response({"error": "User not found"}, status=400)
 
         input_data["user"] = user_obj.id
         task_data_serializers = TaskMasterSerializer(data=input_data)

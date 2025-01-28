@@ -1,5 +1,5 @@
 # Introduction
-Welcome to the project documentation for our task management API built using Django and Django REST Framework. This API provides a robust backend solution for user authentication, task management, and various user interactions. The goal of this project is to create an efficient and user-friendly platform that allows users to register, log in, manage their tasks, and perform various operations seamlessly.
+Welcome to the project documentation for our task management API built using Django and Django REST Framework. This Application provides a robust backend solution for user authentication, task management, and various user interactions. The goal of this project is to create an efficient and user-friendly platform that allows users to register, log in, manage their tasks, and perform various operations seamlessly.
 
 # Getting Started:
 

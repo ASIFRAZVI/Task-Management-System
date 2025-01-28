@@ -1,1 +1,1 @@
-from .student_serializers import UserRegistrationSerializers, UserLoginSerializers, OtpSerializers
+from .user_serializers import UserRegistrationSerializers, UserLoginSerializers, OtpSerializers
